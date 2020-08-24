@@ -2,7 +2,10 @@
 
 {% block page_primary_action %}
   {% if h.check_access('ckanext_pages_update', {}) %}
-    {% link_for _('Add Use Case'), controller='ckanext.pages.controller:PagesController', action='blog_edit', page='', class_='btn btn-primary', icon=h.pages_get_plus_icon() %}
+  <div>
+    {% link_for _('Add Machine Learning Features Dataset'), controller='ckanext.pages.controller:PagesController', action='blog_edit', page='', class_='btn btn-primary', icon=h.pages_get_plus_icon() %}
+    {% link_for _('Add Machine Learning Models'), controller='ckanext.pages.controller:PagesController', action='blog_edit', page='', class_='btn btn-primary', icon=h.pages_get_plus_icon() %}    
+  </div>    
   {% endif %}
 {% endblock %}
 
@@ -17,8 +20,8 @@
 {% set posts = h.get_recent_blog_posts(number=5, exclude=c.page.name) %}
 
   <div class="module module-narrow module-shallow">
-    <h2 class="module-heading">
-      {{ _('Top 5 Data Science Feature 360 Use Cases') }}
+    <h2 class="module-heading" style="margin-top: 10px;;">
+      {{ _('Top 5 Data Science Feature 360 Datasets & Models') }}
     </h2>
     <div class="module-content">
         {% for post in posts %}
@@ -58,7 +61,7 @@
 
 <div class="container-fluid wrapper no-nav">
   <div class="row-fluid">
-    <div class="col-sm-4">
+    <div class="col-sm-4" style="background-color:#efeeee"">
       {{ self.secondary_content() }}
     </div>
     <div class="col-sm-8">
