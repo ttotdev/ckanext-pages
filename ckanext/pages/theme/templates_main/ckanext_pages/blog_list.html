@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block primary_content_inner %}
-  <h1 class="hide-heading">{{ _('Data Science Feature 360 Use Cases') }}</h1>
+  <h1 class="hide-heading">{{ _('Data Science Feature Inventory Use Cases') }}</h1>
   {% snippet 'ckanext_pages/snippets/pages_list.html', pages=c.page.items, type='blog' %}
   {{ c.page.pager() }}
 {% endblock %}
@@ -21,7 +21,7 @@
 
   <div class="module module-narrow module-shallow">
     <h2 class="module-heading" style="margin-top: 10px;;">
-      {{ _('Top 5 Data Science Feature 360 Datasets & Models') }}
+      {{ _('Top 5 Data Science Feature Inventory Datasets & Models') }}
     </h2>
     <div class="module-content">
         {% for post in posts %}
